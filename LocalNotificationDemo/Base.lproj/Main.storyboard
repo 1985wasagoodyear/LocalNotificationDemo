@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Make Notification View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocalNotificationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MakeNotificationViewController" customModule="LocalNotificationDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGb-Fm-2qH">
-                                <rect key="frame" x="172" y="577" width="30" height="30"/>
-                                <state key="normal" title="Fire"/>
+                                <rect key="frame" x="127.5" y="303.5" width="120" height="60"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XGb-Fm-2qH" secondAttribute="height" multiplier="2:1" id="e9r-4A-Fdl"/>
+                                    <constraint firstAttribute="height" constant="60" id="rob-OX-yZl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Fire">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSu-F1-jIQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNu-VX-NVb">
-                                <rect key="frame" x="16" y="177" width="343" height="20.5"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cDK-hW-7CH">
+                                <rect key="frame" x="20" y="252.5" width="335" height="32"/>
+                                <segments>
+                                    <segment title="2"/>
+                                    <segment title="4"/>
+                                    <segment title="6"/>
+                                    <segment title="8"/>
+                                    <segment title="30"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay (seconds)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcf-2D-OVc">
+                                <rect key="frame" x="20" y="218" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,17 +50,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PNu-VX-NVb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="157" id="6Gd-tS-N3W"/>
+                            <constraint firstItem="cDK-hW-7CH" firstAttribute="top" secondItem="qcf-2D-OVc" secondAttribute="bottom" constant="13.5" id="6YB-mL-AtK"/>
+                            <constraint firstItem="cDK-hW-7CH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DK3-Mi-uOe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cDK-hW-7CH" secondAttribute="trailing" constant="20" id="Ncg-IK-REi"/>
                             <constraint firstItem="XGb-Fm-2qH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yb3-6u-FdG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PNu-VX-NVb" secondAttribute="trailing" constant="16" id="bui-eY-HdA"/>
-                            <constraint firstItem="PNu-VX-NVb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rFS-KE-oQH"/>
-                            <constraint firstItem="XGb-Fm-2qH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="PNu-VX-NVb" secondAttribute="bottom" id="saT-1K-NdH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XGb-Fm-2qH" secondAttribute="bottom" constant="60" id="zvZ-zc-R7c"/>
+                            <constraint firstItem="XGb-Fm-2qH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="djL-uh-mwr"/>
+                            <constraint firstItem="qcf-2D-OVc" firstAttribute="leading" secondItem="cDK-hW-7CH" secondAttribute="leading" id="lwV-ec-uRl"/>
+                            <constraint firstItem="XGb-Fm-2qH" firstAttribute="top" secondItem="cDK-hW-7CH" secondAttribute="bottom" constant="20" id="mno-Am-LnB"/>
+                            <constraint firstItem="qcf-2D-OVc" firstAttribute="trailing" secondItem="cDK-hW-7CH" secondAttribute="trailing" id="wRe-GN-81Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="textLabel" destination="PNu-VX-NVb" id="GIj-kc-vga"/>
+                        <outlet property="delayOptionsSegControl" destination="cDK-hW-7CH" id="g3T-sn-k4R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

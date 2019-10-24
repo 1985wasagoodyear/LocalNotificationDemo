@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2CCA5D236229C100EE9B99 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2CCA5C236229C100EE9B99 /* LocalNotificationHelper.swift */; };
 		3F9AC242212D92E3005EFE48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9AC241212D92E3005EFE48 /* AppDelegate.swift */; };
-		3F9AC244212D92E3005EFE48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9AC243212D92E3005EFE48 /* ViewController.swift */; };
+		3F9AC244212D92E3005EFE48 /* MakeNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9AC243212D92E3005EFE48 /* MakeNotificationViewController.swift */; };
 		3F9AC247212D92E3005EFE48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9AC245212D92E3005EFE48 /* Main.storyboard */; };
 		3F9AC249212D92E6005EFE48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9AC248212D92E6005EFE48 /* Assets.xcassets */; };
 		3F9AC24C212D92E6005EFE48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9AC24A212D92E6005EFE48 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2CCA5C236229C100EE9B99 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 		3F9AC23E212D92E3005EFE48 /* LocalNotificationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotificationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9AC241212D92E3005EFE48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F9AC243212D92E3005EFE48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F9AC243212D92E3005EFE48 /* MakeNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNotificationViewController.swift; sourceTree = "<group>"; };
 		3F9AC246212D92E3005EFE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F9AC248212D92E6005EFE48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F9AC24B212D92E6005EFE48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				3F9AC241212D92E3005EFE48 /* AppDelegate.swift */,
-				3F9AC243212D92E3005EFE48 /* ViewController.swift */,
+				3F2CCA5C236229C100EE9B99 /* LocalNotificationHelper.swift */,
+				3F9AC243212D92E3005EFE48 /* MakeNotificationViewController.swift */,
 				3F9AC245212D92E3005EFE48 /* Main.storyboard */,
 				3F9AC248212D92E6005EFE48 /* Assets.xcassets */,
 				3F9AC24A212D92E6005EFE48 /* LaunchScreen.storyboard */,
@@ -135,7 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F9AC244212D92E3005EFE48 /* ViewController.swift in Sources */,
+				3F2CCA5D236229C100EE9B99 /* LocalNotificationHelper.swift in Sources */,
+				3F9AC244212D92E3005EFE48 /* MakeNotificationViewController.swift in Sources */,
 				3F9AC242212D92E3005EFE48 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +285,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LocalNotificationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,6 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LocalNotificationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
