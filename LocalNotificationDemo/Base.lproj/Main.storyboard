@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,33 +16,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGb-Fm-2qH">
-                                <rect key="frame" x="127.5" y="303.5" width="120" height="60"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="XGb-Fm-2qH" secondAttribute="height" multiplier="2:1" id="e9r-4A-Fdl"/>
-                                    <constraint firstAttribute="height" constant="60" id="rob-OX-yZl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Fire">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSu-F1-jIQ"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cDK-hW-7CH">
-                                <rect key="frame" x="20" y="252.5" width="335" height="32"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="cDK-hW-7CH">
+                                <rect key="frame" x="20" y="218" width="335" height="32"/>
                                 <segments>
-                                    <segment title="2"/>
-                                    <segment title="4"/>
-                                    <segment title="6"/>
-                                    <segment title="8"/>
+                                    <segment title="5"/>
+                                    <segment title="10"/>
+                                    <segment title="15"/>
                                     <segment title="30"/>
+                                    <segment title="60"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay (seconds)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcf-2D-OVc">
-                                <rect key="frame" x="20" y="218" width="335" height="21"/>
+                                <rect key="frame" x="20" y="183.5" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Update in the Background?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="R3G-m4-xSY">
+                                <rect key="frame" x="20" y="20" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDK-yM-83D">
+                                <rect key="frame" x="20" y="547" width="335" height="60"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="b8M-pW-rgY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Schedule BG Update">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scheduleBackgroundUpdateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZJ-Mz-4mp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGb-Fm-2qH">
+                                <rect key="frame" x="20" y="427" width="335" height="60"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="oRl-Md-Prd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Local Notification">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scheduleLocalNotificationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSu-F1-jIQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last BG Update:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEB-Pe-HkF">
+                                <rect key="frame" x="20" y="70" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -50,19 +75,31 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cDK-hW-7CH" firstAttribute="top" secondItem="qcf-2D-OVc" secondAttribute="bottom" constant="13.5" id="6YB-mL-AtK"/>
-                            <constraint firstItem="cDK-hW-7CH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DK3-Mi-uOe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cDK-hW-7CH" secondAttribute="trailing" constant="20" id="Ncg-IK-REi"/>
-                            <constraint firstItem="XGb-Fm-2qH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yb3-6u-FdG"/>
-                            <constraint firstItem="XGb-Fm-2qH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="djL-uh-mwr"/>
-                            <constraint firstItem="qcf-2D-OVc" firstAttribute="leading" secondItem="cDK-hW-7CH" secondAttribute="leading" id="lwV-ec-uRl"/>
-                            <constraint firstItem="XGb-Fm-2qH" firstAttribute="top" secondItem="cDK-hW-7CH" secondAttribute="bottom" constant="20" id="mno-Am-LnB"/>
-                            <constraint firstItem="qcf-2D-OVc" firstAttribute="trailing" secondItem="cDK-hW-7CH" secondAttribute="trailing" id="wRe-GN-81Y"/>
+                            <constraint firstItem="R3G-m4-xSY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2Fv-8S-PCM"/>
+                            <constraint firstItem="NEB-Pe-HkF" firstAttribute="trailing" secondItem="R3G-m4-xSY" secondAttribute="trailing" id="47v-YV-Ie4"/>
+                            <constraint firstItem="gDK-yM-83D" firstAttribute="top" secondItem="XGb-Fm-2qH" secondAttribute="bottom" constant="60" id="9pN-Z7-Wjx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R3G-m4-xSY" secondAttribute="trailing" constant="20" id="ATW-rN-f1R"/>
+                            <constraint firstItem="cDK-hW-7CH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="B5E-PF-1Oj"/>
+                            <constraint firstItem="NEB-Pe-HkF" firstAttribute="leading" secondItem="R3G-m4-xSY" secondAttribute="leading" id="D4g-1e-AwR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDK-yM-83D" secondAttribute="trailing" constant="20" id="EhG-4I-uwG"/>
+                            <constraint firstItem="cDK-hW-7CH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JTV-ig-LM8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XGb-Fm-2qH" secondAttribute="trailing" constant="20" id="KOb-iI-Wf6"/>
+                            <constraint firstItem="XGb-Fm-2qH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TaE-js-wUB"/>
+                            <constraint firstItem="cDK-hW-7CH" firstAttribute="top" secondItem="qcf-2D-OVc" secondAttribute="bottom" constant="13.5" id="VUW-3d-bwD"/>
+                            <constraint firstItem="gDK-yM-83D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bHa-PK-Dd9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gDK-yM-83D" secondAttribute="bottom" constant="60" id="ev6-sW-TEG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cDK-hW-7CH" secondAttribute="trailing" constant="20" id="gUv-bL-CV7"/>
+                            <constraint firstItem="R3G-m4-xSY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="maG-1m-MgY"/>
+                            <constraint firstItem="qcf-2D-OVc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mpT-bJ-FZq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qcf-2D-OVc" secondAttribute="trailing" constant="20" id="n1s-Vo-pXo"/>
+                            <constraint firstItem="cDK-hW-7CH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wyO-4m-oxf"/>
+                            <constraint firstItem="NEB-Pe-HkF" firstAttribute="top" secondItem="R3G-m4-xSY" secondAttribute="bottom" constant="20" id="yWh-qY-kJF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="delayOptionsSegControl" destination="cDK-hW-7CH" id="g3T-sn-k4R"/>
+                        <outlet property="lastBGUpdateLabel" destination="NEB-Pe-HkF" id="KCk-3g-k14"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

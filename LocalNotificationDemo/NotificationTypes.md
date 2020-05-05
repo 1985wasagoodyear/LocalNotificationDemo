@@ -5,7 +5,6 @@
 3. Silent Notifications
 
 
-
 # 1. Push Notifications
 
 * comes from a server

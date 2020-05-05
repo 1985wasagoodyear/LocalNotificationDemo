@@ -20,8 +20,7 @@ class LocalNotificationHelper {
     func requestPermissionIfNeeded() {
         if authGranted == true { return }
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-        center.requestAuthorization(options: options)
-        { (granted, error) in
+        center.requestAuthorization(options: options) { (granted, error) in
             self.authGranted = granted
         }
     }
@@ -44,7 +43,7 @@ class LocalNotificationHelper {
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(delay),
                                                         repeats: false)
         
-        // C. create a request with aunique identifier
+        // C. create a request with a unique identifier
         let requestIdentifier = "demoNotification"
         let request = UNNotificationRequest(identifier: requestIdentifier,
                                             content: content,
